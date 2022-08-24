@@ -22,6 +22,8 @@ private:
 public:
 	Map(SDL_Renderer* renderer);
 	~Map();
+	Map(const Map&) = delete;
+	Map& operator=(const Map&) = delete;
 
 	void placeBlock(const Block& block);
 	bool checkBottomCollision(const Block& block);
